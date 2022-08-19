@@ -1,11 +1,16 @@
 ## Demo of how to use a number (which was calculated in an octave
 ## variable) in a symbolic calculation, without getting a warning.
 pkg load symbolic
+
+# have anaconda installed first, replace with your mac account username:
+setenv PYTHON /Users/peterstroessler/opt/anaconda3/bin/python
+
 ## use octave to calculate some number:
  a = pi/2
 
 ## now do some work with the symbolic pkg
-# sympref diagnos syms x
+# sympref diagnos
+syms x
  f = x * cos (x)
  df = diff (f)
 
